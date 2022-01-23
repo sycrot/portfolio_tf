@@ -1,0 +1,306 @@
+:root {
+    --navmenu-height: 56px;
+    --navmenu-bg-color: #1b2630;
+    --navslide-height: 250px;
+    --navslide-bg-texts: #1c2731f6;
+    --title-icon-size: 32px; 
+    --title-color: #0066ff;
+    --title-margin-bottom: 10px;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Source Sans Pro', sans-serif;}
+
+body {width: 100%;}
+
+#initial {
+    width: 100%;
+}
+.navbar {
+    height: var(--navmenu-height);
+}
+.navbar-into {
+    width: 100%;
+    background: var(--navmenu-bg-color);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    z-index: 4;
+}
+
+.logo-link {
+    height: var(--navmenu-height);
+    margin-left: 35px;
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: unset;
+}
+.logo-link img {
+    width: 35px;
+    cursor: pointer;
+}
+.navbar--btnmenu {
+    height: var(--navmenu-height);
+    grid-column: 2;
+    grid-row: 1;
+    margin-right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar--btnmenu i {
+    color: #fff;
+    font-size: 28px;
+    margin-left: 100%;
+    cursor: pointer;
+}
+.navbar--btnmenu:active i {
+    color: #d1d1d1;
+    font-size: 26px;
+}
+
+.navlist {
+    width: 100%;
+    grid-column: 1/3;
+    grid-row: 2;
+
+    background: var(--navmenu-bg-color);
+
+    position: absolute;
+    display: none;
+    z-index: 3;
+}
+.navlist-open {
+    display: block;
+}
+.navlist--ul {
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+.navlist--item {
+    width: 100%;
+}
+.navlist--item a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+
+    height: 40px;
+    padding: 30px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.navlist--item a:active {
+    background: #141c24;
+    font-size: 16px;
+}
+
+.nav-slidedetach {
+    width: 100%;
+    height: var(--navslide-height);
+    background: var(--navmenu-bg-color);
+    overflow: hidden;
+}
+
+.slide-actions {
+    width: 100%;
+    height: var(--navslide-height);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    top: var(--navmenu-height);
+
+    position: absolute;
+    z-index: 1;
+}
+.actions-button {
+    display: flex;
+    align-self: center;
+}
+.actions-prev{
+    justify-self: flex-start;
+}
+.actions-next{
+    justify-self: flex-end;
+}
+.actions-prev i {
+    border-radius: 0 10px 10px 0;
+}
+.actions-next i {
+    border-radius: 10px 0 0 10px;
+}
+.actions-btn-i {
+    width: 25px;
+    height: 35px;
+    background: #0e1b41;
+    padding-top: 50%;
+    text-align: center;
+    color: #fff;
+    opacity: 0.9;
+    font-size: 12px;
+    cursor: pointer;
+}
+.actions-btn-i:hover {
+    background: #0a1535;
+}
+.actions-btn-i:active {
+    background: #091230;
+    font-size: 10px;
+}
+
+.slide-item {
+    width: 100%;
+    height: var(--navslide-height);
+    position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    top: var(--navmenu-height);
+    margin: 0;
+}
+.show-slide {
+    opacity: 1;
+    position: static;
+}
+
+.slide-texts-container {
+    width: 100%;
+    height: var(--navslide-height);
+    background: linear-gradient(120deg, var(--navslide-bg-texts) 75%, transparent 25%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.slide-texts-content {
+    width: 60%;
+    margin-left: 36px;
+    position: relative;
+    z-index: 2;
+}
+.slide--title {
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: var(--title-margin-bottom);
+}
+.description--title {
+    font-size: var(--title-icon-size);
+}
+.slide--paragraph {
+    text-align: justify;
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 100;
+}
+.slide-items-actions {
+    position: relative;
+    width: 90%;
+    margin-top: var(--title-margin-bottom);
+    display: flex;
+}
+.slide-action-item {
+    width: 50%;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    background: #1b263018;
+    cursor: pointer;
+    transition: background .4s ease-in-out;
+}
+.slide-action-item-null {
+    display: none;
+}
+.slide-action-item i {
+    margin-right: 8px;
+}
+.slide-action-item:hover {
+    background: #ffffff;
+    color: #141c24;
+}
+.slide-action-item:active {
+    font-size: 13px;
+    background: #e2e2e2;
+}
+
+@media screen and (min-width: 1040px) {
+    :root {
+        --navmenu-height: 76px;
+        --navslide-height: 420px;
+        --title-icon-size: 42px;
+        --title-margin-bottom: 20px;
+    }
+    .navbar--btnmenu {
+        display: none;
+    }
+
+    .logo-link img {
+        width: 49px;
+        cursor: pointer;
+    }
+    .navlist {
+        grid-column: 2;
+        grid-row: 1;
+    
+        position: relative;
+        margin-top: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navlist--ul {
+        width: 360px;
+        display: flex;
+        justify-content: flex-end;
+        position: static;
+        margin-right: 35px;
+    }
+    .navlist--item {
+        width: 80px;
+        margin-left: 20px;
+    }
+    .navlist--item a {
+        font-weight: 400;
+        font-size: 16px;
+        padding: 40px 0;
+        transition: color .4s ease-in-out;
+    }
+    .navlist--item a:hover {
+        color: #bbbbbb;
+    }
+    .navlist--item a:active {
+        background: transparent;
+        font-size: 15px;
+    }
+
+    .actions-btn-i {
+        width: 40px;
+        height: 55px;
+    }
+    
+    .slide-texts-container {
+        background: linear-gradient(120deg, var(--navslide-bg-texts) 50%, transparent 50%);
+    }
+    .slide-texts-content {
+        width: 36%;
+        margin-left: 66px;
+    }
+    .slide--paragraph {
+        font-size: 18px;
+    }
+    .slide-action-item {
+        height: 40px;
+    }
+}
