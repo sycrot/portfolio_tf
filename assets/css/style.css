@@ -285,10 +285,12 @@ body {width: 100%; background: #13191e;}
 }
 
 .projects--content {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 .pj--items {
+    justify-self: center;
     grid-column: 1/3;
     grid-row: 1;
 }
@@ -329,6 +331,7 @@ body {width: 100%; background: #13191e;}
     border-radius: 0 5px 5px 0;
 }
 .portfolio-btn-end {
+    display: none;
     opacity: 0;
 }
 
@@ -350,14 +353,19 @@ body {width: 100%; background: #13191e;}
     color: #fff;
     overflow: hidden;
     margin: 20px 0;
+
+    opacity: 0;
+    transition: all .5s ease-in-out;
 }
 .show-post-container {
-    display: block;
+    display: flex;
+    opacity: 1;
 }
 .project--texts {
     width: 100%;
     height: 210px;
-    background: linear-gradient(280deg, var(--projects-bg) 56%, transparent 44%);
+    background: linear-gradient(280deg, var(--projects-bg) 60%, transparent 40%);
+    position: relative;
 }
 .project--texts-principal {
     width: 46%;
@@ -377,9 +385,13 @@ body {width: 100%; background: #13191e;}
     margin-left: 50%;
     list-style: none;
     display: flex;
+    justify-content: end;
     align-items: flex-end;
-    padding: 0 10px 0 0;
-    font-size: var(--paragraph-size);
+    padding: 0 0 20px 0;
+    font-size: 12px;
+
+    position: absolute;
+    bottom: 0;
 }
 .project--frameworkslist li {
     margin-left: 8px;
@@ -410,27 +422,19 @@ body {width: 100%; background: #13191e;}
     font-size: 13px;
 }
 
-@media screen and (min-width: 680px) {
-    .aboutme-container {
-        height: 370px;
-        display: flex;
-        align-items: center;
-        background-position: center;
-    }
-
+@media screen and (min-width: 800px) {
     .projects--content {
-        width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .pj-project-item {
+        width: 100%;
+        margin: 0 20px;
+    }
     .pj--items {
         display: flex;
         margin-bottom: 20px;
         justify-self: center;
-    }
-
-    .pj-project-item {
-        margin: 0 20px;
     }
 }
 
@@ -440,7 +444,7 @@ body {width: 100%; background: #13191e;}
         --navslide-height: 420px;
         --title-icon-size: 42px;
         --title-margin-bottom: 40px;
-        --paragraph-size: 18px;
+        --paragraph-size: 16px;
     }
     .navbar--btnmenu {
         display: none;
@@ -546,8 +550,7 @@ body {width: 100%; background: #13191e;}
     .pj--items {
         width: 100%;
         grid-column: 2;
-        flex: auto;
-        align-self: center;
+        justify-content: space-around;
         margin: 0;
     }
     .pj--action {
@@ -592,7 +595,6 @@ body {width: 100%; background: #13191e;}
     }
 
     .pj-project-item {
-        width: 100%;
         height: 280px;
         border-radius: 5px;
         display: none;
@@ -607,8 +609,6 @@ body {width: 100%; background: #13191e;}
     .project--texts {
         width: 100%;
         height: 240px;
-        background: linear-gradient(280deg, var(--projects-bg) 56%, transparent 44%);
-        position: relative;
     }
     .project--texts-principal {
         width: 46%;
@@ -624,14 +624,7 @@ body {width: 100%; background: #13191e;}
         width: 46%;
         margin-left: 50%;
         list-style: none;
-        display: flex;
-        justify-content: end;
-        align-items: flex-end;
-        padding: 0 0 20px 0;
         font-size: 13px;
-
-        position: absolute;
-        bottom: 0;
     }
     .project--frameworkslist li {
         margin-left: 8px;
