@@ -45,6 +45,11 @@ slideItems.map((item, index) => (
 
 const slideContentItems = document.querySelectorAll('.slide-item')
 init()
+
+const intervalSlide = setInterval(() => {
+    showNextSlide()
+}, 5000)
+
 function init() {
     var _show = slideContent.querySelectorAll('.show-slide')
 
