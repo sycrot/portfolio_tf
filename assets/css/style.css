@@ -152,6 +152,7 @@ body {width: 100%; background: #13191e;}
     opacity: 0.9;
     font-size: 12px;
     cursor: pointer;
+    transition: background .4s ease-in-out;
 }
 .actions-btn-i:hover {
     background: #0a1535;
@@ -308,6 +309,7 @@ body {width: 100%; background: #13191e;}
     background: #4a5d5a31;
     color: #fff;
     cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 .pj--action:hover {
     background: #44535131;
@@ -422,9 +424,11 @@ body {width: 100%; background: #13191e;}
     color: #fff;
     text-decoration: none;
     font-size: var(--paragraph-size);
+    transition: all .4s ease-in-out;
 }
 .pj-action-item:hover {
-    color: #e2e2e2;
+    color: #cecece;
+    background: #0c1635;
 }
 .pj-action-item:active {
     font-size: 13px;
@@ -483,7 +487,6 @@ body {width: 100%; background: #13191e;}
     justify-content: center;
     align-items: center;
     padding: 40px 0;
-    margin-top: var(--navmenu-height);
 
     background: #1b2630;
 }
@@ -610,6 +613,7 @@ body {width: 100%; background: #13191e;}
         --title-icon-size: 42px;
         --title-margin-bottom: 20px;
         --paragraph-size: 16px;
+        --section-margin: 150px;
     }
     .navbar--btnmenu {
         display: none;
@@ -684,7 +688,7 @@ body {width: 100%; background: #13191e;}
         background-repeat: no-repeat;
         background-position: -20px 0;
         background-size: 420px;
-        margin-top: var(--navmenu-height);
+        margin-top: var(--section-margin);
         overflow: unset;
         display: flex;
         align-items: center;
@@ -708,6 +712,9 @@ body {width: 100%; background: #13191e;}
 
     /* ABOUTME END */
     /* PROJECTS */
+    .projects-container {
+        margin-top: var(--section-margin);
+    }
     .projects--content {
         width: 100%;
         grid-template-columns: 5% 90% 5%;
@@ -821,11 +828,16 @@ body {width: 100%; background: #13191e;}
     }
     /* PROJECTS END */
 
+    .contactme-container {
+        margin-top: var(--section-margin);
+    }
+
     /* FOOTER */
     .footer-container {
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-start;
+        margin-top: calc(var(--section-margin) - 60px);
     }
     .footer--ul {
         text-align: left;

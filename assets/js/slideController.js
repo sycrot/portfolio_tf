@@ -48,7 +48,7 @@ init()
 
 const intervalSlide = setInterval(() => {
     showNextSlide()
-}, 5000)
+}, 6000)
 
 function init() {
     var _show = slideContent.querySelectorAll('.show-slide')
