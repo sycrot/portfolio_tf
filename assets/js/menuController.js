@@ -1,10 +1,19 @@
 const btnMenuBar = document.querySelector('.navbar--btnmenu i')
 const menuNavList = document.querySelector('.navlist')
+const menuItems = document.querySelectorAll('.navlist--item-link[href^="#"]')
+const footerNavItems = document.querySelectorAll('.footer--ul-link[href^="#"]')
+const navbarInto = document.querySelector('.navbar-into')
 
-let menuItems = document.querySelectorAll('.navlist--item-link[href^="#"]')
-let footerNavItems = document.querySelectorAll('.footer--ul-link[href^="#"]')
+let topWindow = 90
 
-let topWindow = 100
+/* let lastScrollTop = 0
+window.addEventListener('scroll', e => {
+    if (e.scrollY === lastScrollTop) return
+
+    this.scrollY < lastScrollTop ? navbarInto.classList.add('navbar-into-open') : navbarInto.classList.remove('navbar-into-open')
+
+    lastScrollTop = this.scrollY
+}, true) */
 
 renderEvents()
 
@@ -30,14 +39,15 @@ function scrollToIdOnClick(event) {
     event.preventDefault()
     
     const to = getScrollTopByHref(event.target)
-    scrollToPosition(to)
+    const href = event.target.hash
+    scrollToPosition(to, href)
     menuNavList.classList.remove('navlist-open')
 }
 
-function scrollToPosition(to) {
-    if (window.matchMedia('(min-width: 800px').matches) {
-        topWindow = 200
-    }
+function scrollToPosition(to, hash) {
+    let winMatchMedia = window.matchMedia('(min-width: 800px)').matches
+    if (winMatchMedia) topWindow = 200
+    if (winMatchMedia && hash == '#projects') topWindow = 150
     window.scroll({
         top: to - topWindow,
         behavior: 'smooth'

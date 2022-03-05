@@ -93,7 +93,7 @@
         const top = document.querySelector('.projects-container').offsetTop
 
         window.scroll({
-            top: top - 120,
+            top: top - 150,
             behavior: 'smooth'
         })
     }
