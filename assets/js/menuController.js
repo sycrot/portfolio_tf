@@ -6,6 +6,13 @@ const navbarInto = document.querySelector('.navbar-into')
 
 let topWindow = 90
 
+window.addEventListener('scroll', e => {
+    const footer = document.querySelector('#footer').offsetTop-490
+
+    if (this.scrollY >= footer) { navbarInto.classList.remove('navbar-into-open') }
+    else { navbarInto.classList.add('navbar-into-open') }
+})
+
 /* let lastScrollTop = 0
 window.addEventListener('scroll', e => {
     if (e.scrollY === lastScrollTop) return
