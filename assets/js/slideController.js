@@ -6,19 +6,27 @@ let currentSlide = 0
 const slideItems = [
     {
         title: 'react_quizacarde',
-        tools_used: ['HTML', 'CSS', 'React'],
-        description: 'é um jogo quiz criado com contador de vidas, e outras funcoes.',
+        tools_used: ['HTML', 'CSS e React'],
+        description: 'é um jogo quiz, totalmente desenvolvido com react, com contador de vidas, e outras funções.',
         preview_link: null,
         repo_link: 'https://github.com/sycrot/react_quizacarde',
         img_bg: 'react_quiz_app_web_1434041121'
     },
     {
         title: 'memory_game',
-        tools_used: ['HTML', 'CSS', 'Javascript'],
-        description: 'é um jogo da memória, onde você pode escolher a quantidade de itens e a quantidade de jogadores.',
+        tools_used: ['HTML', 'CSS e Javascript'],
+        description: 'um jogo da memória, onde você pode escolher a quantidade de itens e a quantidade de jogadores.',
         preview_link: 'https://sycrot.github.io/memory_game/',
         repo_link: 'https://github.com/sycrot/memory_game',
         img_bg: 'memory_game_tf_mult_1129261021'
+    },
+    {
+        title: 'calculator-app-main',
+        tools_used: ['HTML', 'CSS e Javascript'],
+        description: 'uma calculadora simples, onde o usuário pode escolher o tema que desejar.',
+        preview_link: 'https://sycrot.github.io/calculator-app-main/',
+        repo_link: 'https://github.com/sycrot/calculator-app-main',
+        img_bg: 'img_calc_project_frontendmentor'
     }
 ]
 
