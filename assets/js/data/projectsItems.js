@@ -116,7 +116,7 @@
 
     projects.reverse().map((item, index) => (
         projectsContainer.innerHTML += `
-        <div class="pj-project-item" style="background: url(/assets/img/posts/${item.sampleImg}.jpg); background-size: 500px;">
+        <div class="pj-project-item" style="background: url(assets/img/posts/${item.sampleImg}.jpg); background-size: 500px;">
             <div class="project--texts">
                 <div class="project--texts-principal">
                     <h3 class="project--title">${item.title}</h3>
