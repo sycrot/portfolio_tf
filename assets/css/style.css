@@ -359,7 +359,6 @@ body {width: 100%; background: #13191e;}
 .pj-project-item {
     width: 350px;
     height: 250px;
-    border-radius: 5px;
     display: none;
     flex-direction: column;
     color: #fff;
