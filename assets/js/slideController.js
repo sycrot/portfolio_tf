@@ -35,7 +35,7 @@ slideItems.map((item, index) => (
         <div id="slide_item${index}" class="slide-item" style="background-image: url(assets/img/posts/${item.img_bg}.jpg);">
             <div class="slide-texts-container">
                 <div class="slide-texts-content">
-                    <div class="slide--title">
+                    <div class="slide--title item--title">
                         <i class="fas fa-layer-group description--title"></i>
                         <h3>Destaques</h3>
                     </div>
