@@ -699,7 +699,7 @@ body {width: 100%; background: #13191e;}
         justify-content: flex-end;
     }
     .navlist--ul {
-        width: 360px;
+        width: 410px;
         display: flex;
         justify-content: flex-end;
         position: static;
