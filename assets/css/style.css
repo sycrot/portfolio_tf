@@ -259,7 +259,6 @@ body {width: 100%; background: #13191e;}
 /* ABOUTME */
 .aboutme-container {
     width: 100%;
-    height: 220px;
     background: url(../img/bg_aboutme_mobile.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -431,6 +430,8 @@ body {width: 100%; background: #13191e;}
 }
 .skills-content {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 .skills-list {
@@ -476,6 +477,25 @@ body {width: 100%; background: #13191e;}
 }
 .sli-react i:hover{
     color: #80D8F7;
+}
+.skills-others {
+    margin-top: 1.4em;
+    text-align: center;
+    line-height: 1.7em;
+}
+.skills-others p {
+    color: #fff;
+}
+.skothers-separator {
+    color: #bbb;
+}
+.others-item {
+    color: #bbbbbb;
+    cursor: default;
+    transition: all .2s ease-in-out;
+}
+.others-item:hover {
+    color: #fff;
 }
 
 /* CONTACTE-ME */
@@ -673,7 +693,7 @@ body {width: 100%; background: #13191e;}
         --navslide-height: 420px;
         --title-icon-size: 42px;
         --title-margin-bottom: 20px;
-        --paragraph-size: 16px;
+        --paragraph-size: 1.1em;
         --section-margin: 150px;
     }
     .navbar-into {
@@ -758,9 +778,9 @@ body {width: 100%; background: #13191e;}
         align-items: center;
     }
     .aboutme--texts {
-        width: 70%;
+        width: 50%;
         position: absolute;
-        right: 0;
+        right: 10%;
     }
     .aboutme--title {
         margin-bottom: calc(var(--title-margin-bottom) + 26px);
