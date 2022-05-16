@@ -36,7 +36,7 @@ slideItems.map((item, index) => (
             <div class="slide-texts-container">
                 <div class="slide-texts-content">
                     <div class="slide--title item--title">
-                        <i class="fas fa-layer-group description--title"></i>
+                        <i class="description--title"><img src="assets/img/icons/star.svg"/></i>
                         <h3>Destaques</h3>
                     </div>
                     <div class="slide--paragraph">Desenvolvido com ${item.tools_used.join(', ')}<br> <h3>${item.title}</h3>${item.description}</div>
