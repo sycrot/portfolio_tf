@@ -111,6 +111,19 @@
             ],
             author: 'Thiago Farias',
             linkRepository: 'https://github.com/sycrot/react_quizacarde',
+        },
+        {
+            title: 'teste_econverse',
+            description: '',
+            sampleImg: 'teste_econverse',
+            tags: [
+                'HTML',
+                'CSS',
+                'Javascript',
+                'Vue'
+            ],
+            author: 'Thiago Farias',
+            linkRepository: 'https://github.com/sycrot/teste_econverse',
         }
     ]
 

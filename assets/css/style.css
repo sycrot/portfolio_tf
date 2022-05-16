@@ -457,7 +457,7 @@ body {width: 100%; background: #13191e;}
     z-index: -1;
 }
 .skills-list-item:hover .skills-legend {
-    animation: skillslegend 0.4s;
+    animation: skillslegend 0.4s ease-in-out;
     display: block;
 }
 
