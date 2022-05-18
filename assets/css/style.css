@@ -277,7 +277,8 @@ body {width: 100%; background: #13191e;}
 .aboutme--paragraph {
     text-align: center;
     color: #fff;
-    font-size: var(--paragraph-size)
+    font-size: var(--paragraph-size);
+    text-align: justify;
 }
 /* ABOUTME END */
 
