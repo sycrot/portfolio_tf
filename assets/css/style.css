@@ -1,8 +1,10 @@
 :root {
     --navmenu-height: 56px;
     --navmenu-bg-color: #1b2630;
+    --navmenu-bg-color: #10172B;
     --navslide-height: 280px;
     --navslide-bg-texts: #1c2731f6;
+    --navslide-bg-texts: #10172bf5;
     --title-icon-size: 32px; 
     --title-color: #0066ff;
     --title-margin-bottom: 10px;
@@ -431,12 +433,12 @@ body {width: 100%; background: #13191e;}
 #others {
     width: 100%;
     margin-top: var(--section-margin);
+    background: #111a2e9a;
 }
 .others-container {
     width: 100%;
     background: #111A2E;
     padding: 5em 0 0 0;
-    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%);
 }
 
 /* SKILLS */
@@ -668,6 +670,13 @@ body {width: 100%; background: #13191e;}
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 20px;
+    }
+
+    #others {
+        
+    }
+    .others-container {
+        clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
     }
 
     .skills-list {
