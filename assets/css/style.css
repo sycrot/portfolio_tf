@@ -434,7 +434,7 @@ body {width: 100%; background: #13191e;}
 }
 .others-container {
     width: 100%;
-    background: #0e1b4171;
+    background: #111A2E;
     padding: 5em 0 0 0;
     clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%);
 }
@@ -580,7 +580,7 @@ body {width: 100%; background: #13191e;}
     align-items: center;
     padding: 40px 0;
 
-    background: #0e1b41;
+    background: #0e1427;
 }
 .logo-footer {
     width: 120px;
@@ -621,7 +621,7 @@ body {width: 100%; background: #13191e;}
 
 .footer-container-bottom {
     width: 100%;
-    background: #141b21;
+    background: #10172b;
     text-align: center;
     padding: 20px 0;
 }
