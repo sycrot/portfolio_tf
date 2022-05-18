@@ -1,7 +1,7 @@
 :root {
     --navmenu-height: 56px;
     --navmenu-bg-color: #1b2630;
-    --navslide-height: 250px;
+    --navslide-height: 280px;
     --navslide-bg-texts: #1c2731f6;
     --title-icon-size: 32px; 
     --title-color: #0066ff;
@@ -428,10 +428,14 @@ body {width: 100%; background: #13191e;}
 
 /* OTHERS */
 #others {
-    background: #161d22;
-    padding: 4em 0 0 0;
-    border-radius: 0 10em 0 0;
+    width: 100%;
     margin-top: var(--section-margin);
+}
+.others-container {
+    width: 100%;
+    background: #0e1b4171;
+    padding: 5em 0 0 0;
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%);
 }
 
 /* SKILLS */
@@ -575,7 +579,7 @@ body {width: 100%; background: #13191e;}
     align-items: center;
     padding: 40px 0;
 
-    background: #1b2630;
+    background: #0e1b41;
 }
 .logo-footer {
     width: 120px;
@@ -718,7 +722,7 @@ body {width: 100%; background: #13191e;}
         --navslide-height: 420px;
         --title-icon-size: 42px;
         --title-margin-bottom: 20px;
-        --paragraph-size: 1.1em;
+        --paragraph-size: 1em;
         --section-margin: 150px;
     }
     .navbar-into {
