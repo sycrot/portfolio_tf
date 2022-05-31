@@ -114,7 +114,7 @@
         },
         {
             title: 'teste_econverse',
-            description: '',
+            description: 'Página inicial de uma loja de instrumentos',
             sampleImg: 'teste_econverse',
             tags: [
                 'HTML',
@@ -124,6 +124,20 @@
             ],
             author: 'Thiago Farias',
             linkRepository: 'https://github.com/sycrot/teste_econverse',
+        },
+        {
+            title: 'my-money-app-cod3r',
+            description: 'Aplicação de finanças. Desenvolvido junto com o curso "Curso React + Redux" da Cod3r',
+            sampleImg: 'my-money-app-cod3r',
+            tags: [
+                'HTML',
+                'CSS',
+                'Javascript',
+                'React',
+                'Redux'
+            ],
+            author: 'Thiago Farias',
+            linkRepository: 'https://github.com/sycrot/my-money-app-frontend',
         }
     ]
 

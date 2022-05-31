@@ -671,10 +671,6 @@ body {width: 100%; background: #13191e;}
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 20px;
     }
-
-    #others {
-        
-    }
     .others-container {
         clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
     }
