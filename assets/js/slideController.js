@@ -1,6 +1,7 @@
 const slideContent = document.querySelector('.slide-content-items')
 const btnNextSlide = document.querySelector('.actions-next i')
 const btnPrevSlide = document.querySelector('.actions-prev i')
+const slideNavigation = document.querySelector('.slide-actions-navigation')
 let currentSlide = 0
 
 const slideItems = [
@@ -50,8 +51,16 @@ slideItems.map((item, index) => (
     `
 ))
 
+for (let i in slideItems) {
+    slideNavigation.innerHTML += `
+        <div class="slide-circle-navigation" id="slide-circle-${i}">
+        </div>
+    `
+}
+
 
 const slideContentItems = document.querySelectorAll('.slide-item')
+const slideBtnsNavigation = document.querySelectorAll('.slide-circle-navigation')
 init()
 /* 
 const intervalSlide = setInterval(() => {
@@ -60,13 +69,16 @@ const intervalSlide = setInterval(() => {
 
 function init() {
     var _show = slideContent.querySelectorAll('.show-slide')
+    var _btnShow = slideNavigation.querySelectorAll('.slide-circle-navigation-active')
 
     Array.prototype.forEach.call(_show, item => {
         item.classList.remove('show-slide')
     })
+    Array.prototype.forEach.call(_btnShow, item => {
+        item.classList.remove('slideNavigation')
+    } )
     slideContentItems[0].classList.add('show-slide')
-    btnNextSlide.removeAttribute('style')
-    btnPrevSlide.removeAttribute('style')
+    slideBtnsNavigation[0].classList.add('slide-circle-navigation-active')
 
     addListeners()
 }
@@ -77,11 +89,17 @@ function addListeners() {
 }
 
 function showNextSlide() {
+    if (currentSlide == slideItems.length) {
+        currentSlide = 0;
+    }
     currentSlide++
     showSlide()
 }
 
 function showPrevSlide() {
+    if (currentSlide <= 0) {
+        currentSlide = slideItems.length
+    }
     currentSlide--
     showSlide()
 }
@@ -92,5 +110,15 @@ function showSlide() {
     slide = Math.abs(slide)
 
     document.querySelector('.show-slide').classList.remove('show-slide')
+    document.querySelector('.slide-circle-navigation-active').classList.remove('slide-circle-navigation-active')
+
     slideContentItems[slide].classList.add('show-slide')
+    slideBtnsNavigation[slide].classList.add('slide-circle-navigation-active')
+}
+
+for (let i in slideBtnsNavigation) {
+    slideBtnsNavigation[i].addEventListener('click', () => {
+        currentSlide = i
+        showSlide()
+    })
 }
