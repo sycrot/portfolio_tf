@@ -2,6 +2,7 @@
     const items = document.querySelectorAll('.pj-project-item')
     const btnPrev = document.querySelector('.pj--action-prev')
     const btnNext = document.querySelector('.pj--action-next')
+    const paginatorContainer = document.querySelector('.projects-paginator')
     let divItems = []
     let pageActual = 1
     let totalPage = 0
@@ -18,6 +19,23 @@
     items.forEach(e => {divItems.push(e)})
     generateItemsQuantity(items, pageActual)
     initButtonEvents()
+    /*
+    handlePaginator()
+    pageActualActivate(pageActual) */
+
+    /* function handlePaginator() {
+        for(let i=1; i <= totalPage; i++) {
+            paginatorContainer.innerHTML += `<div class="paginator-item">${i}</div>`
+        }
+    } */
+
+    /* function pageActualActivate(pageActual) {
+        let pages = paginatorContainer.querySelectorAll('.paginator-item')
+        pages.forEach(e => {
+            e.classList.remove('paginator-item-active')
+        })
+        pages[pageActual-1].classList.add('paginator-item-active')
+    } */
 
     function generateItemsQuantity(items, pageActual) {
         listItems(items, pageActual, limitItems)
@@ -50,11 +68,40 @@
                 }, 500)
             }
         })
+
     }
 
     function initButtonEvents() {
         nextPage()
         backPage()
+        /* navigationPages() */
+    }
+
+    function navigationPages() {
+        let paginatorItems = document.querySelectorAll('.paginator-item')
+
+        paginatorItems.forEach(e => {
+            e.addEventListener('click', () => {
+                backTopContainer()
+                pageActual = +e.innerHTML
+                generateItemsQuantity(items, pageActual)
+                pageActualActivate(pageActual)
+
+                if (pageActual >= totalPage) {
+                    addClassList(btnNext, 'portfolio-btn-end')
+                }
+                if (pageActual > 1) {
+                    removeClassList(btnPrev, 'portfolio-btn-end')
+                }
+
+                if (pageActual <= 1) {
+                    addClassList(btnPrev, 'portfolio-btn-end')
+                }
+                if (pageActual < totalPage) {
+                    removeClassList(btnNext, 'portfolio-btn-end')
+                }
+            })
+        })
     }
 
     function nextPage() {
@@ -65,6 +112,7 @@
             backTopContainer()
             pageActual++
             generateItemsQuantity(items, pageActual)
+            /* pageActualActivate(pageActual) */
             if (pageActual >= totalPage) {
                 addClassList(btnNext, 'portfolio-btn-end')
             } else if (pageActual > 1) {
@@ -81,6 +129,7 @@
             backTopContainer()
             pageActual--
             generateItemsQuantity(items, pageActual)
+            /* pageActualActivate(pageActual) */
             if (pageActual <= 1) {
                 addClassList(btnPrev, 'portfolio-btn-end')
             } else if (pageActual < totalPage) {

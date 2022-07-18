@@ -138,6 +138,21 @@
             ],
             author: 'Thiago Farias',
             linkRepository: 'https://github.com/sycrot/my-money-app-frontend',
+        },
+        {
+            title: 'ecommerce-carrefour-tech-day-dio',
+            description: 'Site ecommerce desenvolvido para o concurso Carrefour TechDay da Digital Innovation One',
+            sampleImg: 'ecommerce-carrefour-tech-day-dio',
+            tags: [
+                'HTML',
+                'CSS',
+                'Javascript',
+                'React',
+                'Typescript'
+            ],
+            author: 'Thiago Farias',
+            linkPages: 'https://ecommerce-carrefour-tech-day-dio.vercel.app/',
+            linkRepository: 'https://github.com/sycrot/ecommerce-carrefour-tech-day-dio',
         }
     ]
 

@@ -6,20 +6,20 @@ let currentSlide = 0
 
 const slideItems = [
     {
+        title: 'ecommerce-carrefour-tech-day-dio',
+        tools_used: ['HTML', 'CSS e React'],
+        description: 'Um site ecommerce baseado no Carrefour, utilizando uma das API`s do próprio site carrefour.',
+        preview_link: 'https://ecommerce-carrefour-tech-day-dio.vercel.app/',
+        repo_link: 'https://github.com/sycrot/ecommerce-carrefour-tech-day-dio',
+        img_bg: 'ecommerce-carrefour-tech-day-dio'
+    },
+    {
         title: 'react_quizacarde',
         tools_used: ['HTML', 'CSS e React'],
         description: 'é um jogo quiz, totalmente desenvolvido com react, com contador de vidas, e outras funções.',
         preview_link: null,
         repo_link: 'https://github.com/sycrot/react_quizacarde',
         img_bg: 'react_quiz_app_web_1434041121'
-    },
-    {
-        title: 'memory_game',
-        tools_used: ['HTML', 'CSS e Javascript'],
-        description: 'um jogo da memória, onde você pode escolher a quantidade de itens e a quantidade de jogadores.',
-        preview_link: 'https://sycrot.github.io/memory_game/',
-        repo_link: 'https://github.com/sycrot/memory_game',
-        img_bg: 'memory_game_tf_mult_1129261021'
     },
     {
         title: 'calculator-app-main',
