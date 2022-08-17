@@ -15,7 +15,6 @@
   --text-big: 20px;
 }
 
-
 /* HEADER INIT */
 #header {
   width: 100%;
@@ -257,12 +256,12 @@
 
 /* PROJECTS */
 #projects {
-  margin-top: 48px;
+  margin-top: 58px;
 }
 
 .projects-content {
   width: 100%;
-  margin-top: 14px;
+  margin-top: 34px;
   display: flex;
   justify-content: center;
   position: relative;
@@ -378,7 +377,8 @@
 
 #skills {
   width: 100%;
-  margin-top: 62px;
+  margin-top: 72px;
+  background: url(../img/bg/skills.svg) no-repeat 100%;
 }
 
 .skills-content {
@@ -390,7 +390,7 @@
 }
 
 .skills-content-images {
-  width: 218px;
+  width: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -405,8 +405,9 @@
 }
 
 .skills-content-item img{
-  width: 44px;
+  width: 42px;
   margin-bottom: 10px;
+  filter: grayscale(100%);
 }
 
 .skills-content-item small {
@@ -429,3 +430,99 @@
 }
 
 /* END SKILLS */
+
+/* CONTACTME */
+#contactme {
+  height: 270px;
+  margin-top: 76px;
+  background: url(../img/bg/contactme.svg) no-repeat;
+  display: flex;
+  justify-content: center;
+}
+.contactme-container {
+  width: 70%;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6em;
+}
+
+.contactme-item {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-small);
+  color: #797979;
+  margin: 0.5em 0;
+}
+.contactme-item a {
+  text-decoration: none;
+  color: #797979;
+  margin-left: 0.5em;
+}
+.contactme-item img {
+  width: 20px;
+  margin-right: 0.5em;
+}
+/* END CONTACTME */
+
+/* FOOTER */
+.footer-content {
+  width: 100%;
+  background: var(--color-blue-3f);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+
+.menu-list {
+  list-style: none;
+  text-align: center;
+}
+.menu-list-item {
+  margin: 0.4em 0;
+}
+.menu-list-item a {
+  text-decoration: none;
+  color: #fff;
+  font-size: var(--text-small);
+  font-weight: 400;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  margin-top: 2em;
+}
+
+.social-list-item {
+  margin: 0 0.5em;
+}
+.social-list-item a img {
+  width: 45px;
+}
+
+.footer-assignment {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #043462;
+}
+
+.footer-assignment p {
+  font-size: var(--text-small);
+  color: #fff;
+}
+
+.footer-assignment p a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* FOOTER END */
