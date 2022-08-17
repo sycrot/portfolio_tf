@@ -79,25 +79,58 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .carousel-content {
   width: 100%;
-  display: flex;
   height: 233px;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.carousel-content-info {
-  width: 170px;
+.carousel-item {
+  width: 100%;
+  height: 233px;
   margin-left: 36px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  top: 0;
+  margin: 0;
+}
+
+.carousel-grid {
+  width: 177px;
+  margin-left: 42px;
+
+}
+
+.show-slide {
+  opacity: 1;
+  position: static;
+}
+
+.slide-circle-navigation-active {
+
 }
 
 .carousel-content-text p {
+  width: 177px;
   font-size: 12px;
   color: #fff;
   margin-bottom: 14px;
+  animation: carouselText .8s ease-in-out;
+}
+
+@keyframes carouselText {
+  from {
+    opacity: 0;
+    margin-left: -360px;
+  } to {
+    opacity: 1;
+    margin-left: 0;
+  }
 }
 
 .carousel-content-actions {
@@ -105,6 +138,17 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  animation: carouselContentActions 1s ease-in-out;
+}
+
+@keyframes carouselContentActions {
+  from {
+    opacity: 0;
+    padding-top: 180px;
+  } to {
+    opacity: 1;
+    padding-top: 0;
+  }
 }
 .carousel-content-button {
   width: 100%;
@@ -199,10 +243,22 @@
   overflow: hidden;
   transform: rotate(35deg);
   top: -120px;
-  right: -50px;
+  right: -60px;
   position: absolute;
   z-index: 2;
+  animation: carouselImg .5s ease-in-out;
 }
+
+@keyframes carouselImg {
+  from {
+    opacity: 0;
+    right: -300px;
+  } to {
+    opacity: 1;
+    right: -60px;
+  }
+}
+
 .carousel-content-image-container {
   width: 170px;
   height: 170px;
@@ -225,6 +281,18 @@
   border-radius: 18px;
   position: absolute;
   top: -50px;
+  right: -80px;
+  animation: carouselBg .4s ease-in-out;
+}
+
+@keyframes carouselBg {
+  from {
+    opacity: 0;
+    right: -180px;
+  } to {
+    opacity: 1;
+    right: -80px;
+  }
 }
 
 
@@ -275,6 +343,23 @@
   overflow: hidden;
   background-size: 150%;
   background-repeat: no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: none;
+  animation: showPorject .4s ease-in-out;
+}
+
+.show-post-container {
+  display: block;
+}
+
+@keyframes showPorject {
+  from {
+    opacity: 0;
+    margin-left: 5em;
+  } to {
+    opacity: 1;
+    margin-left: 0;
+  }
 }
 
 .project-item-content {
@@ -333,6 +418,10 @@
   border-radius: 3px;
   transition: background .2s ease-in-out;
   cursor: pointer;
+}
+.portfolio-btn-end {
+  pointer-events: none;
+  opacity: 0;
 }
 .project-item-button:hover {
   background: rgba(51, 156, 255, 0.23);
