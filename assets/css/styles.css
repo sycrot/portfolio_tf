@@ -18,8 +18,8 @@
 /* HEADER INIT */
 #header {
   width: 100%;
-  height: 280px;
   overflow: hidden;
+  position: relative;
 }
 
 .header-nav {
@@ -72,9 +72,9 @@
 
 .carousel-highlights {
   width: 100%;
-  height: 233px;
+  height: 273px;
   background: var(--color-blue-3f);
-  margin-top: calc(var(--navmenu-height) + 1px);
+  padding-top: calc(var(--navmenu-height));
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -84,12 +84,12 @@
 
 .carousel-content {
   width: 100%;
-  height: 233px;
+  height: 253px;
 }
 
 .carousel-item {
   width: 100%;
-  height: 233px;
+  height: 253px;
   margin-left: 36px;
   position: absolute;
   display: flex;
@@ -102,8 +102,11 @@
 
 .carousel-grid {
   width: 177px;
+  height: 223px;
   margin-left: 42px;
-
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .show-slide {
@@ -115,12 +118,12 @@
 
 }
 
-.carousel-content-text p {
+.carousel-content-description {
   width: 177px;
   font-size: 12px;
   color: #fff;
   margin-bottom: 14px;
-  animation: carouselText .8s ease-in-out;
+  animation: carouselText 1s ease-in-out;
 }
 
 @keyframes carouselText {
@@ -138,16 +141,18 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  animation: carouselContentActions 1s ease-in-out;
+  position: absolute;
+  top: 193px;
+  animation: carouselContentActions 1.3s ease-in-out;
 }
 
 @keyframes carouselContentActions {
   from {
     opacity: 0;
-    padding-top: 180px;
+    top: 300px;
   } to {
     opacity: 1;
-    padding-top: 0;
+    top: 193px;
   }
 }
 .carousel-content-button {
@@ -177,6 +182,15 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  animation: titleSection 1.2s ease-in-out;
+}
+
+@keyframes titleSection {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }
 .title-section p {
   font-size: var(--text-semismall);
@@ -242,11 +256,11 @@
 .carousel-content-image {
   overflow: hidden;
   transform: rotate(35deg);
-  top: -120px;
-  right: -60px;
+  top: -140px;
+  right: -120px;
   position: absolute;
   z-index: 2;
-  animation: carouselImg .5s ease-in-out;
+  animation: carouselImg .8s ease-in-out;
 }
 
 @keyframes carouselImg {
@@ -255,21 +269,21 @@
     right: -300px;
   } to {
     opacity: 1;
-    right: -60px;
+    right: -120px;
   }
 }
 
 .carousel-content-image-container {
-  width: 170px;
-  height: 170px;
+  width: 210px;
+  height: 210px;
   background: var(--color-blue-075);
   border-radius: 18px;
   overflow: hidden;
 }
 .carousel-content-image-container img {
-  width: 300%;
-  margin-top: -40px;
-  margin-left: -150px;
+  width: 180%;
+  margin-top: 35px;
+  margin-left: -120px;
   transform: rotate(-35deg);
 }
 
@@ -312,12 +326,30 @@
 .aboutme-image img{
   width: 150px;
   margin: 14px 0;
+  animation: aboutMeImage .8s ease-in-out;
+}
+
+@keyframes aboutMeImage {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }
 
 .aboutme-text {
   text-align: justify;
   line-height: 150%;
   color: #3f3f3f;
+  animation: aboutmeText 2s ease-in-out;
+}
+
+@keyframes aboutmeText {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }
 
 /* ABOUTME END */
@@ -345,14 +377,14 @@
   background-repeat: no-repeat;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: none;
-  animation: showPorject .4s ease-in-out;
+  animation: showProjectAnimation .4s ease-in-out;
 }
 
 .show-post-container {
   display: block;
 }
 
-@keyframes showPorject {
+@keyframes showProjectAnimation {
   from {
     opacity: 0;
     margin-left: 5em;
@@ -466,6 +498,8 @@
 
 #skills {
   width: 100%;
+  height: 340px;
+  overflow: hidden;
   margin-top: 72px;
   background: url(../img/bg/skills.svg) no-repeat 100%;
 }
@@ -486,27 +520,70 @@
 }
 
 .skills-content-item {
+  width: 64px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10px;
+  margin: 10px 0;
+  animation: skillsItemsAnimation 1s ease-in-out;
+}
+
+@keyframes skillsItemsAnimation {
+  from {
+    opacity: 0;
+    margin-top: 150px;
+  } to {  
+    opacity: 1;
+    margin-top: 10px;
+  }
 }
 
 .skills-content-item img{
   width: 42px;
   margin-bottom: 10px;
   filter: grayscale(100%);
+  transition: all .3s;
+}
+.skills-content-item img:hover {
+  filter: grayscale(0);
+}
+.skills-content-item:hover .skills-content-item-legend{
+  opacity: 1;
+  animation: skillsContentItemText .5s ease-in-out;
 }
 
-.skills-content-item small {
+.skills-content-item-legend {
   font-size: 12px;
   color: #3f3f3f;
+  opacity: 0;
+}
+
+@keyframes skillsContentItemText {
+  from {
+    opacity: 0;
+    margin-left: -10px;
+  } to {
+    opacity: 1;
+    margin-left: 0;
+  }
 }
 
 .skills-content-others {
   margin-top: 30px;
   text-align: center;
+  animation: skillsOthersAnimation 1.3s ease-in-out;
+}
+
+@keyframes skillsOthersAnimation {
+  from {
+    opacity: 0;
+    margin-top: 150px;
+  } to {
+    opacity: 1;
+    margin-top: 30px;
+  }
 }
 
 .skills-others-texts small {
@@ -536,6 +613,7 @@
   align-items: center;
   justify-content: center;
   margin-left: 6em;
+  overflow: hidden;
 }
 
 .contactme-item {
@@ -544,11 +622,27 @@
   font-size: var(--text-small);
   color: #797979;
   margin: 0.5em 0;
+  animation: contactmeItem 1s ease-in-out;
+}
+
+.contactme-item a:hover {
+  color: #b0b0b0;
+}
+
+@keyframes contactmeItem {
+  from {
+    opacity: 0;
+    margin-right: -150px;
+  } to {
+    opacity: 1;
+    margin-right: 0;
+  }
 }
 .contactme-item a {
   text-decoration: none;
   color: #797979;
   margin-left: 0.5em;
+  transition: color .4s;
 }
 .contactme-item img {
   width: 20px;
@@ -579,6 +673,10 @@
   color: #fff;
   font-size: var(--text-small);
   font-weight: 400;
+  transition: color .2s;
+}
+.menu-list-item a:hover {
+  color: #dcdcdc;
 }
 
 .social-list {
@@ -592,6 +690,11 @@
 }
 .social-list-item a img {
   width: 45px;
+  transition: all .3s;
+}
+
+.social-list-item a img:hover {
+  filter: sepia(20%);
 }
 
 .footer-assignment {

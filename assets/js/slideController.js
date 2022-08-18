@@ -1,6 +1,6 @@
 const slideContent = document.querySelector('.carousel-content-items')
-const btnNextSlide = document.querySelector('.carousel-btn-prev')
-const btnPrevSlide = document.querySelector('.carousel-btn-next')
+const btnNextSlide = document.querySelector('.carousel-btn-next')
+const btnPrevSlide = document.querySelector('.carousel-btn-prev')
 const slideNavigation = document.querySelector('.carousel-actions-navigation')
 let currentSlide = 0
 
@@ -40,7 +40,7 @@ slideItems.map((item, index) => (
                     <p>Destaques</p>
                 </div>
                 <div class="carousel-content-text">
-                    <p>
+                    <p class="carousel-content-description">
                     Desenvolvido com ${item.tools_used.join(', ')}
                     <br />
                     <strong>${item.title}</strong>
@@ -104,6 +104,7 @@ function addListeners() {
 }
 
 function showNextSlide() {
+    showAnimation()
     if (currentSlide == slideItems.length) {
         currentSlide = 0;
     }
@@ -112,6 +113,7 @@ function showNextSlide() {
 }
 
 function showPrevSlide() {
+    showAnimation()
     if (currentSlide <= 0) {
         currentSlide = slideItems.length
     }
@@ -128,7 +130,28 @@ function showSlide() {
     document.querySelector('.slide-circle-navigation-active').classList.remove('slide-circle-navigation-active')
 
     slideContentItems[slide].classList.add('show-slide')
+    
     slideBtnsNavigation[slide].classList.add('slide-circle-navigation-active')
+}
+
+function showAnimation() {
+    const text = document.querySelector('.carousel-content-description')
+    const carouselActions = document.querySelector('.carousel-content-actions')
+    const titleSection = document.querySelector('.carousel-grid .title-section')
+    const carouselImage = document.querySelector('.carousel-content-image')
+    const carouselImageBg = document.querySelector('.carousel-image-bg')
+
+    text.style.animation = "none"
+    carouselActions.style.animation = "none"
+    titleSection.style.animation = "none"
+    carouselImage.style.animation = "none"
+    carouselImageBg.style.animation = "none"
+
+    setTimeout(() => text.style.animation = '', 100)
+    setTimeout(() => carouselActions.style.animation = '', 100)
+    setTimeout(() => titleSection.style.animation = '', 100)
+    setTimeout(() => carouselImage.style.animation = '', 100)
+    setTimeout(() => carouselImageBg.style.animation = '', 100)
 }
 
 for (let i in slideBtnsNavigation) {
