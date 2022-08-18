@@ -104,7 +104,6 @@ function addListeners() {
 }
 
 function showNextSlide() {
-    showAnimation()
     if (currentSlide == slideItems.length) {
         currentSlide = 0;
     }
@@ -113,7 +112,6 @@ function showNextSlide() {
 }
 
 function showPrevSlide() {
-    showAnimation()
     if (currentSlide <= 0) {
         currentSlide = slideItems.length
     }
@@ -128,30 +126,33 @@ function showSlide() {
 
     document.querySelector('.show-slide').classList.remove('show-slide')
     document.querySelector('.slide-circle-navigation-active').classList.remove('slide-circle-navigation-active')
-
-    slideContentItems[slide].classList.add('show-slide')
     
+    slideContentItems[slide].classList.add('show-slide')
     slideBtnsNavigation[slide].classList.add('slide-circle-navigation-active')
+    showAnimation(slide)
 }
 
-function showAnimation() {
-    const text = document.querySelector('.carousel-content-description')
-    const carouselActions = document.querySelector('.carousel-content-actions')
-    const titleSection = document.querySelector('.carousel-grid .title-section')
-    const carouselImage = document.querySelector('.carousel-content-image')
-    const carouselImageBg = document.querySelector('.carousel-image-bg')
+function showAnimation(slide) {
+    const text = slideContentItems[slide].querySelector('.carousel-content-description')
+    const carouselActions = slideContentItems[slide].querySelector('.carousel-content-actions')
+    const titleSection = slideContentItems[slide].querySelector('.carousel-grid .title-section')
+    const carouselImage = slideContentItems[slide].querySelector('.carousel-content-image')
+    const carouselImageBg = slideContentItems[slide].querySelector('.carousel-image-bg')
+    const carouselContentImageContainerImg = slideContentItems[slide].querySelector('.carousel-content-image-container img')
 
     text.style.animation = "none"
     carouselActions.style.animation = "none"
     titleSection.style.animation = "none"
     carouselImage.style.animation = "none"
     carouselImageBg.style.animation = "none"
+    carouselContentImageContainerImg.style.animation = "none"
 
-    setTimeout(() => text.style.animation = '', 100)
-    setTimeout(() => carouselActions.style.animation = '', 100)
-    setTimeout(() => titleSection.style.animation = '', 100)
-    setTimeout(() => carouselImage.style.animation = '', 100)
-    setTimeout(() => carouselImageBg.style.animation = '', 100)
+    setTimeout(() => text.style.animation = '', 0)
+    setTimeout(() => carouselActions.style.animation = '', 0)
+    setTimeout(() => titleSection.style.animation = '', 0)
+    setTimeout(() => carouselImage.style.animation = '', 0)
+    setTimeout(() => carouselImageBg.style.animation = '', 0)
+    setTimeout(() => carouselContentImageContainerImg.style.animation = '', 0)
 }
 
 for (let i in slideBtnsNavigation) {

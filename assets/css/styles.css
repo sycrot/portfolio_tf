@@ -285,6 +285,14 @@
   margin-top: 35px;
   margin-left: -120px;
   transform: rotate(-35deg);
+  animation: carouselImageAnimation 1.8s ease-in-out;
+}
+@keyframes carouselImageAnimation {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }
 
 .carousel-image-bg {
