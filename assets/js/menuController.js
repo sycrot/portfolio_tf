@@ -1,4 +1,4 @@
-const btnMenuBar = document.querySelector('.navbar--btnmenu i')
+/* const btnMenuBar = document.querySelector('.navbar--btnmenu i')
 const menuNavList = document.querySelector('.navlist')
 const menuItems = document.querySelectorAll('.navlist--item-link[href^="#"]')
 const footerNavItems = document.querySelectorAll('.footer--ul-link[href^="#"]')
@@ -12,15 +12,6 @@ window.addEventListener('scroll', e => {
     if (this.scrollY >= footer) { navbarInto.classList.remove('navbar-into-open') }
     else { navbarInto.classList.add('navbar-into-open') }
 })
-
-/* let lastScrollTop = 0
-window.addEventListener('scroll', e => {
-    if (e.scrollY === lastScrollTop) return
-
-    this.scrollY < lastScrollTop ? navbarInto.classList.add('navbar-into-open') : navbarInto.classList.remove('navbar-into-open')
-
-    lastScrollTop = this.scrollY
-}, true) */
 
 renderEvents()
 
@@ -64,5 +55,5 @@ function scrollToPosition(to, hash) {
 function getScrollTopByHref(el) {
     const id = el.getAttribute('href')
     return document.querySelector(id).offsetTop
-}
+} */
 

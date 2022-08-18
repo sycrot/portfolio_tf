@@ -40,15 +40,11 @@
 
         items.forEach(e => {
             removeClassList(e, 'show-post-container')
-            e.style.opacity = '0'
         })
 
         result.forEach(e => {
             if (e !== undefined) {
                 addClassList(e , 'show-post-container')
-                setInterval(() => {
-                    e.style.opacity = '1'
-                }, 500)
             }
         })
 
@@ -65,7 +61,7 @@
             addClassList(btnNext, 'portfolio-btn-end')
         }
         btnNext.addEventListener('click', () => {
-            backTopContainer()
+            /* backTopContainer() */
             pageActual++
             generateItemsQuantity(items, pageActual)
             /* pageActualActivate(pageActual) */
@@ -82,7 +78,7 @@
             addClassList(btnPrev, 'portfolio-btn-end')
         }
         btnPrev.addEventListener('click', () => {
-            backTopContainer()
+            /* backTopContainer() */
             pageActual--
             generateItemsQuantity(items, pageActual)
             /* pageActualActivate(pageActual) */
@@ -94,14 +90,14 @@
         })
     }
 
-    function backTopContainer() {
+    /* function backTopContainer() {
         const top = document.querySelector('.projects-content').offsetTop
 
         window.scroll({
             top: top - 150,
             behavior: 'smooth'
         })
-    }
+    } */
 
     function addClassList(element, classList) {
         element.classList.add(classList)
