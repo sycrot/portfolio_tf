@@ -1177,6 +1177,9 @@ footer {
     --navmenu-height: 63px;
   }
   /* HEADER */
+  .nav-logo img{
+    width: 38px;
+  }
 
   .carousel-highlights {
     height: 488px;
