@@ -1055,6 +1055,11 @@ footer {
     font-size: 14px;
   }
 
+  .carousel-content-button img {
+    width: 12px;
+    margin-right: 5px;
+  }
+
   .project-item-title {
     font-size: 16px;
   }
