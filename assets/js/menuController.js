@@ -3,7 +3,7 @@ const menuNavList = document.querySelector('.nav-menu')
 const menuItems = document.querySelectorAll('.nav-menu-list-item a[href^="#"]')
 const footerNavItems = document.querySelectorAll('.menu-list-item a[href^="#"]')
 
-let topWindow = 70
+let topWindow = 90
 
 window.addEventListener('scroll', e => {
     const footer = document.querySelector('footer').offsetTop-490
