@@ -1185,8 +1185,24 @@ footer {
     width: 490px;
   }
 
-  .slide-circle-navigation-active {
+  .carousel-actions-navigation {
+    display: block;
+    position: absolute;
+    margin-bottom: -195px;
+    left: 50%;
+  }
 
+  .carousel-btn-navigation {
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    margin: 0 0.3em;
+    width: 18px;
+    height: 18px;
+  }
+
+  .slide-circle-navigation-active {
+    background: #fff;
   }
 
   .carousel-actions {
@@ -1243,12 +1259,6 @@ footer {
       left: -240px;
     }
   }
-
-
-  .carousel-actions-navigation {
-    display: none;
-    bottom: 0;
-  }
   /* HEADER end */
 
   /* ABOUTME */
@@ -1284,46 +1294,9 @@ footer {
   /* END SKILLS */
 
   /* CONTACTME */
-  #contactme {
-    height: 400px;
-    align-items: center;
-  }
-  .contactme-container {
-    height: 400px;
-    background-size: 380px;
-    padding-left: 0;
-  }
-
-  .contactme-item {
-    font-size: 18px;
-    margin: 1em 0;
-  }
-  .contactme-item img {
-    width: 30px;
-    margin-right: 0.8em;
-  }
   /* END CONTACTME */
 
   /* FOOTER */
-  footer {
-    margin-top: 108px;
-  }
-  .footer-content {
-    display: flex;
-    flex-direction: row;
-    padding: 3em 0;
-  }
-
-  .menu-list {
-    list-style: none;
-    text-align: center;
-  }
-  .menu-list-item {
-    margin: 1em 5em;
-  }
-  .social-list-item a img {
-    width: 65px;
-  }
 
   /* FOOTER END */
 }

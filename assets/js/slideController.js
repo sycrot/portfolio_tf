@@ -155,9 +155,9 @@ function showAnimation(slide) {
     setTimeout(() => carouselContentImageContainerImg.style.animation = '', 0)
 }
 
-/* for (let i in slideBtnsNavigation) {
+for (let i in slideBtnsNavigation) {
     slideBtnsNavigation[i].addEventListener('click', () => {
         currentSlide = i
         showSlide()
     })
-} */
+}
