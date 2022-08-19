@@ -15,7 +15,7 @@
   --text-big: 20px;
 }
 
-/* HEADER INIT */
+/* HEADER */
 #header {
   width: 100%;
   overflow: hidden;
@@ -30,7 +30,7 @@
   background: var(--color-blue-3f);
   border-bottom: 1px solid var(--color-blue-4a);
   top: 0;
-  z-index: 4;
+  z-index: 6;
 }
 
 .header-nav-content {
@@ -960,12 +960,13 @@ footer {
 
   /* ABOUTME */
   #aboutme {
+    height: 460px;
     overflow:hidden;
     display: flex;
     justify-content: center;
   }
   .aboutme-content {
-    max-width: 1200px;
+    max-width: 1366px;
     grid-template-column: repeat(2, 1fr);
   }
   
@@ -1020,7 +1021,8 @@ footer {
 
   /* PROJECTS */
   #projects {
-    margin-top: 128px;
+    margin-top: 168px;
+    margin-bottom: 108px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1046,6 +1048,11 @@ footer {
   .project-item-content {
     height: 180px;
     background: linear-gradient(280deg, var(--color-blue-3f) 65%, transparent 30%);
+  }
+
+  .carousel-content-button {
+    height: 36px;
+    font-size: 14px;
   }
 
   .project-item-title {
@@ -1116,11 +1123,173 @@ footer {
 
   /* CONTACTME */
   #contactme {
-    height: 680px;
+    height: 400px;
     align-items: center;
   }
   .contactme-container {
-    height: 680px;
+    height: 400px;
+    background-size: 380px;
+    padding-left: 0;
+  }
+
+  .contactme-item {
+    font-size: 18px;
+    margin: 1em 0;
+  }
+  .contactme-item img {
+    width: 30px;
+    margin-right: 0.8em;
+  }
+  /* END CONTACTME */
+
+  /* FOOTER */
+  footer {
+    margin-top: 108px;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    padding: 3em 0;
+  }
+
+  .menu-list {
+    list-style: none;
+    text-align: center;
+  }
+  .menu-list-item {
+    margin: 1em 5em;
+  }
+  .social-list-item a img {
+    width: 65px;
+  }
+
+  /* FOOTER END */
+}
+
+
+@media screen and (min-width: 1366px) {
+  :root {
+    --navmenu-height: 63px;
+  }
+  /* HEADER */
+
+  .carousel-highlights {
+    height: 488px;
+  }
+
+  .carousel-content {
+    width: 1050px;
+  }
+
+  .carousel-grid {
+    width: 490px;
+  }
+
+  .slide-circle-navigation-active {
+
+  }
+
+  .carousel-actions {
+    width: 1200px;
+  }
+
+  .carousel-content-image {
+    transform: rotate(35deg);
+    top: -180px;
+    right: 0;
+  }
+
+  .carousel-content-description {
+    font-size: 16px;
+  }
+
+  .carousel-content-button {
+    background: var(--color-blue-075);
+    background: none;
+    color: #fff;
+    transition: all .2s ease-in-out;
+  }
+  .carousel-content-button:hover {
+    background: #fff;
+    color: #6f6f6f;
+  }
+  .carousel-content-button:hover img {
+    filter: invert(70%);
+  }
+
+  .carousel-content-image-container {
+    width: 330px;
+    height: 330px;
+  }
+  .carousel-content-image-container img {
+    width: 260%;
+    margin-top: -60px;
+    margin-left: -260px;
+  }
+
+  .carousel-image-bg {
+    width: 340px;
+    height: 330px;
+    top: -120px;
+    left: -240px;
+  }
+
+  @keyframes carouselBg {
+    from {
+      opacity: 0;
+      left: 240px;
+    } to {
+      opacity: 1;
+      left: -240px;
+    }
+  }
+
+
+  .carousel-actions-navigation {
+    display: none;
+    bottom: 0;
+  }
+  /* HEADER end */
+
+  /* ABOUTME */
+  /* ABOUTME END */
+
+  /* PROJECTS */
+  .project-item-button {
+    background: none;
+  }
+  .project-item-button:hover {
+    background: rgba(51, 156, 255, 0.15);
+  }
+
+  .projects-navigation {
+    width: 1140px;
+  }
+  .navigation-btn-prev {
+    left: -34px;
+    top: 95px;
+  }
+  .navigation-btn-next {
+    left: 1136px;
+    top: 95px;
+  }
+
+  /* END PROJECTS */
+
+  /* SKILLS */
+
+  .skills-container {
+    background: url(../img/bg/skills.svg) no-repeat 100% 50%;
+  }
+  /* END SKILLS */
+
+  /* CONTACTME */
+  #contactme {
+    height: 400px;
+    align-items: center;
+  }
+  .contactme-container {
+    height: 400px;
     background-size: 380px;
     padding-left: 0;
   }

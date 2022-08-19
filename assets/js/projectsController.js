@@ -11,7 +11,7 @@
     if (window.matchMedia("(min-width: 800px").matches) {
         limitItems = 2
     }
-    if (window.matchMedia("(min-width: 1040px").matches) {
+    if (window.matchMedia("(min-width: 1366px").matches) {
         limitItems = 3
     }
 
