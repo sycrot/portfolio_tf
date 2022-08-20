@@ -87,6 +87,11 @@
   font-size: 12px;
   text-decoration: none;
   color: #fff;
+  transition: color .2s ease-in-out;
+}
+
+.nav-menu-list-item a:hover {
+  color: #dcdcdc;
 }
 
 .header-nav-menubutton {
