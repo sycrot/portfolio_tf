@@ -165,9 +165,7 @@
                         ${item.title}
                     </div>
                     <div class="project-item-tools">
-                        ${item.tags.map(tag => (
-                            tag
-                        ))}
+                        ${item.tags.join(' ')}
                     </div>
                     <div class="project-item-description">
                         ${item.description}

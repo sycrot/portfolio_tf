@@ -427,7 +427,7 @@
 }
 
 .project-item {
-  width: 333px;
+  width: 313px;
   height: 200px;
   background: var(--color-blue-3f);
   border-radius: 12px;
@@ -469,7 +469,7 @@
 }
 
 .project-item-texts {
-  width: 195px;
+  width: 175px;
   margin-right: 27px;
   text-align: end;
 }
@@ -483,6 +483,7 @@
   font-size: 12px;
   font-weight: 300;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .project-item-description {
@@ -522,7 +523,7 @@
 }
 
 .projects-navigation {
-  width: 195px;
+  width: 185px;
   position: absolute;
 }
 .projects-navigation-btn {
@@ -539,11 +540,11 @@
   transition: all .2s ease-in-out;
 }
 .navigation-btn-prev {
-  left: -88px;
+  left: -78px;
   top: 80px;
 }
 .navigation-btn-next {
-  left: 244px;
+  left: 226px;
   top: 80px;
 }
 .projects-navigation-btn:hover{
@@ -709,11 +710,11 @@
 
 @keyframes contactmeItem {
   from {
-    opacity: 0;
     margin-right: -150px;
+    opacity: 0;
   } to {
-    opacity: 1;
     margin-right: 0;
+    opacity: 1;
   }
 }
 .contactme-item a {
@@ -961,7 +962,6 @@ footer {
 
   /* ABOUTME */
   #aboutme {
-    height: 460px;
     overflow:hidden;
     display: flex;
     justify-content: center;
@@ -1049,6 +1049,12 @@ footer {
   .project-item-content {
     height: 180px;
     background: linear-gradient(280deg, var(--color-blue-3f) 65%, transparent 30%);
+  }
+
+  .project-item-texts {
+    width: 195px;
+    margin-right: 27px;
+    text-align: end;
   }
 
   .carousel-content-button {
@@ -1271,6 +1277,9 @@ footer {
   /* HEADER end */
 
   /* ABOUTME */
+  #aboutme {
+    height: 480px;
+  }
   /* ABOUTME END */
 
   /* PROJECTS */

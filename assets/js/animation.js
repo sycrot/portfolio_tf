@@ -4,12 +4,11 @@ const aboutmeTextAnimation = document.querySelector('.aboutme-text')
 const projectItemAnimation = document.querySelectorAll('.project-item')
 const skillsContentItemAnimation = document.querySelector('.skills-content-item')
 const skillsContentOthersAnimation = document.querySelector('.skills-content-others')
-const contactmeItemAnimation = document.querySelector('.contactme-item')
+const contactmeItemAnimation = document.querySelector('.contactme-content')
 
 const aboutmeContainer = document.querySelector('#aboutme')
 const projectsContentTop = document.querySelector('.projects-content')
 const skillsContentTop = document.querySelector('.skills-content')
-const contactmeContentTop = document.querySelector('.contactme-content')
 
 const debounce = function(func, wait, immediate) {
   let timeout
@@ -50,7 +49,7 @@ function playAnimation() {
   getOffsetTop(skillsContentTop, skillsContentItemAnimation, 'skills-content-item-animation')
   getOffsetTop(skillsContentTop, skillsContentOthersAnimation, 'skills-content-others-animation')
 
-  getOffsetTop(contactmeContentTop, contactmeItemAnimation, 'contactme-item-animation')
+  getOffsetTop(contactmeItemAnimation, contactmeItemAnimation, 'contactme-item-animation')
 }
 
 playAnimation()
