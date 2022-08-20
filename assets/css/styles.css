@@ -416,6 +416,7 @@
 /* PROJECTS */
 #projects {
   margin-top: 128px;
+  overflow: hidden;
 }
 
 .projects-content {
@@ -1179,7 +1180,7 @@ footer {
 }
 
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1280px) {
   :root {
     --navmenu-height: 63px;
   }
@@ -1305,10 +1306,6 @@ footer {
   /* END PROJECTS */
 
   /* SKILLS */
-
-  .skills-container {
-    background: url(../img/bg/skills.svg) no-repeat 100% 50%;
-  }
   /* END SKILLS */
 
   /* CONTACTME */
@@ -1317,4 +1314,10 @@ footer {
   /* FOOTER */
 
   /* FOOTER END */
+}
+
+@media screen and (min-width: 1282px) {
+  .skills-container {
+    background: url(../img/bg/skills.svg) no-repeat 100% 50%;
+  }
 }
