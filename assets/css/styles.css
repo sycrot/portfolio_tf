@@ -805,7 +805,7 @@ footer {
 @media screen and (min-width: 800px) {
   /* HEADER */
   .header-nav-content {
-    max-width: 1280px;
+    max-width: 1080px;
   }
   .header-nav-menubutton {
     display: none;
