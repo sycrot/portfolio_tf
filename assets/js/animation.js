@@ -1,4 +1,5 @@
 const titleContainer = document.querySelectorAll('.title-section')
+const aboutmeContentAnimation = document.querySelector('.aboutme-content')
 const aboutmeImageImgAnimation = document.querySelector('.aboutme-image img')
 const aboutmeTextAnimation = document.querySelector('.aboutme-text')
 const projectItemAnimation = document.querySelectorAll('.project-item')
@@ -7,8 +8,9 @@ const skillsContentOthersAnimation = document.querySelector('.skills-content-oth
 const contactmeItemAnimation = document.querySelector('.contactme-content')
 
 const aboutmeContainer = document.querySelector('#aboutme')
-const projectsContentTop = document.querySelector('.projects-content')
-const skillsContentTop = document.querySelector('.skills-content')
+const projectsContentTop = document.querySelector('.projects')
+const skillsContentTop = document.querySelector('.skills-container')
+const contactmeContentTop = document.querySelector('.contactme-container')
 
 const debounce = function(func, wait, immediate) {
   let timeout
@@ -27,7 +29,7 @@ const debounce = function(func, wait, immediate) {
 
 function getOffsetTop(elTop, el, className) {
   const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4)
-  if (windowTop > elTop.offsetTop) {
+  if (windowTop > elTop) {
     el.classList.add(className)
   } else {
     el.classList.remove(className)
@@ -39,17 +41,21 @@ function playAnimation() {
     getOffsetTop(title, title, 'title-section-animation')
   })
 
-  getOffsetTop(aboutmeContainer, aboutmeImageImgAnimation, 'about-image-animation')
-  getOffsetTop(aboutmeContainer, aboutmeTextAnimation,'aboutme-text-animation')
+  getOffsetTop(aboutmeContainer.offsetTop + 350, aboutmeContentAnimation, 'aboutme-content-animation')
+  getOffsetTop(aboutmeContainer.offsetTop + 350, aboutmeImageImgAnimation, 'about-image-animation')
+  getOffsetTop(aboutmeContainer.offsetTop + 350, aboutmeTextAnimation,'aboutme-text-animation')
 
+  getOffsetTop(projectsContentTop.offsetTop, projectsContentTop, 'projects-animation')
   projectItemAnimation.forEach((project) => {
-    getOffsetTop(projectsContentTop, project, 'project-item-animation')
+    getOffsetTop(projectsContentTop.offsetTop, project, 'project-item-animation')
   })
 
-  getOffsetTop(skillsContentTop, skillsContentItemAnimation, 'skills-content-item-animation')
-  getOffsetTop(skillsContentTop, skillsContentOthersAnimation, 'skills-content-others-animation')
+  getOffsetTop(skillsContentTop.offsetTop, skillsContentTop, 'skills-container-animation')
+  getOffsetTop(skillsContentTop.offsetTop, skillsContentItemAnimation, 'skills-content-item-animation')
+  getOffsetTop(skillsContentTop.offsetTop, skillsContentOthersAnimation, 'skills-content-others-animation')
 
-  getOffsetTop(contactmeItemAnimation, contactmeItemAnimation, 'contactme-item-animation')
+  getOffsetTop(contactmeContentTop.offsetTop, contactmeContentTop, 'contactme-container-animation')
+  getOffsetTop(contactmeItemAnimation.offsetTop, contactmeItemAnimation, 'contactme-item-animation')
 }
 
 playAnimation()

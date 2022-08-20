@@ -364,6 +364,11 @@
 
 .aboutme-content {
   display: grid;
+  opacity: 0;
+}
+
+.aboutme-content-animation {
+  opacity: 1;
 }
 
 .aboutme-content .title-section {
@@ -417,6 +422,14 @@
 #projects {
   margin-top: 128px;
   overflow: hidden;
+}
+
+.projects {
+  opacity: 0;
+}
+
+.projects-animation {
+  opacity: 1;
 }
 
 .projects-content {
@@ -570,6 +583,20 @@
   margin-top: 128px;
   background: url(../img/bg/skills.svg) no-repeat 130% 60%;
   background-size: 50%;
+  opacity: 0;
+}
+
+.skills-container-animation {
+  opacity: 1;
+  animation: skillsContainerAnimation .7s ease-in;
+}
+
+@keyframes skillsContainerAnimation {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }
 
 .skills-content {
@@ -691,6 +718,21 @@
   padding-left: 6em;
   justify-content: center;
   overflow: hidden;
+  opacity: 0;
+}
+
+.contactme-container-animation {
+  opacity: 1;
+  animation: contactmeContainerAnimation .7s ease-in;
+}
+
+@keyframes contactmeContainerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .contactme-item {
