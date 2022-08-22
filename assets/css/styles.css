@@ -199,8 +199,18 @@
   animation: welcomeContentButtonAnimation 2s ease-in-out;
 }
 
-.welcome_cv_button {
+.welcome_cv_button a{
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+}
+
+.welcome_cv_button a:hover {
+  color: var(--color-blue-075);
 }
 
 @keyframes welcomeContentButtonAnimation {
