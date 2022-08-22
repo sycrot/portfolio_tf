@@ -199,6 +199,10 @@
   animation: welcomeContentButtonAnimation 2s ease-in-out;
 }
 
+.welcome_cv_button {
+  text-decoration: none;
+}
+
 @keyframes welcomeContentButtonAnimation {
   from {
     opacity: 0;
