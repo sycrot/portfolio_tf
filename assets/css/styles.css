@@ -113,10 +113,21 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .welcome-image img{
   width: 195px;
+  animation: welcomeImageAnimation 2s ease-in-out;
+}
+
+@keyframes welcomeImageAnimation {
+  from {
+    opacity: 0;
+  } 
+  to {
+    opacity: 1;
+  }
 }
 
 .welcome-content {
@@ -127,17 +138,44 @@
   color: #fff;
   font-weight: normal;
   font-size: 14px;
+  animation: welcomeContentTextAnimation 3s ease-in-out;
+}
+@keyframes welcomeContentTextAnimation {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@keyframes welcomeContentTextAnimation2 {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }
 .welcome-content h3 {
   font-size: 18px;
   font-weight: bold;
   color: var(--color-blue-339c);
+  animation: welcomeContentTextAnimation2 1s ease-in-out;
 }
 
 .welcome-social-list {
   list-style: none;
   display: flex;
   margin: 9px 0;
+  animation: welcomeContentContentAnimation 1s ease-in-out;
+}
+@keyframes welcomeContentContentAnimation {
+  from {
+    opacity: 0;
+    margin-top: -100px;
+  } to {
+    opacity: 1;
+    margin-top: 9px;
+  }
 }
 
 .welcome-social-list-item a img {
@@ -158,6 +196,15 @@
   font-weight: normal;
   border-radius: 3px;
   transition: all .3s ease-in-out;
+  animation: welcomeContentButtonAnimation 2s ease-in-out;
+}
+
+@keyframes welcomeContentButtonAnimation {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }
 
 .welcome_cv_button:hover {
@@ -852,22 +899,8 @@ footer {
   padding: 2em 0;
 }
 
-.menu-list {
-  list-style: none;
-  text-align: center;
-}
-.menu-list-item {
-  margin: 0.4em 0;
-}
-.menu-list-item a {
-  text-decoration: none;
-  color: #fff;
-  font-size: var(--text-small);
-  font-weight: 400;
-  transition: color .2s;
-}
-.menu-list-item a:hover {
-  color: #dcdcdc;
+.footer-logo img{
+  width: 186px;
 }
 
 .social-list {
@@ -940,7 +973,7 @@ footer {
   }
 
   .welcome {
-    height: 400px;
+    height: 390px;
   }
   
   .welcome-image img{
@@ -1310,15 +1343,15 @@ footer {
     padding: 3em 0;
   }
 
-  .menu-list {
-    list-style: none;
-    text-align: center;
+  .footer-logo {
+    margin-right: 3em;
   }
-  .menu-list-item {
-    margin: 1em 5em;
+  .footer-logo img{
+    width: 235px;
   }
-  .social-list-item a img {
-    width: 65px;
+
+  .social-list {
+    margin-top: 0;
   }
 
   /* FOOTER END */
